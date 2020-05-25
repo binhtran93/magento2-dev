@@ -12,4 +12,12 @@
             <argument name="resourceModel" xsi:type="string">Vendor\ModuleName\Model\ResourceModel\Post</argument>
         </arguments>
     </virtualType>
+
+    <type name="Magento\Framework\Console\CommandList">
+        <arguments>
+            <argument name="commands" xsi:type="array">
+                <item name="exampleSayHello" xsi:type="object">Vendor\ModuleName\Console\SayHello</item>
+            </argument>
+        </arguments>
+    </type>
 </config>

@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Indexer/etc/indexer.xsd">
+    <indexer id="vendor_modulename_indexer" view_id="vendor_modulename_indexer" class="Vendor\ModuleName\Model\Indexer\Test">
+        <title translate="true">Mageplaza HelloWorld Indexer</title>
+        <description translate="true">HelloWorld of custom indexer</description>
+    </indexer>
+</config>
