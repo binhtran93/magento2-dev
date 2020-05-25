@@ -3,14 +3,14 @@
     <acl>
         <resources>
             <resource id="Magento_Backend::admin">
-                <resource id="Mageplaza_HelloWorld::helloworld" title="Hello World" sortOrder="51">
-                    <resource id="Mageplaza_HelloWorld::post" title="Posts" sortOrder="10"/>
-                    <resource id="Mageplaza_HelloWorld::helloworld_configuration" title="Configuration" sortOrder="99" />
+                <resource id="Vendor_ModuleName::helloworld" title="Hello World" sortOrder="51">
+                    <resource id="Vendor_ModuleName::post" title="Posts" sortOrder="10"/>
+                    <resource id="Vendor_ModuleName::helloworld_configuration" title="Configuration" sortOrder="99" />
                 </resource>
                 <resource id="Magento_Backend::stores">
                     <resource id="Magento_Backend::stores_settings">
                         <resource id="Magento_Config::config">
-                            <resource id="Mageplaza_HelloWorld::helloworld_config" title="Hello World"/>
+                            <resource id="Vendor_ModuleName::helloworld_config" title="Hello World"/>
                         </resource>
                     </resource>
                 </resource>
