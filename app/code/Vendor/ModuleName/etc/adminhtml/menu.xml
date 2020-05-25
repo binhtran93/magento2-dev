@@ -2,7 +2,7 @@
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
     <menu>
         <add id="Vendor_ModuleName::helloworld" title="Hello World" module="Vendor_ModuleName" sortOrder="51" resource="Vendor_ModuleName::helloworld"/>
-        <add id="Vendor_ModuleName::post" title="Manage Posts" module="Vendor_ModuleName" sortOrder="10" action="mageplaza_helloworld/post" resource="Vendor_ModuleName::post" parent="Vendor_ModuleName::helloworld"/>
+        <add id="Vendor_ModuleName::post" title="Manage Posts" module="Vendor_ModuleName" sortOrder="10" action="vendor_modulename/post" resource="Vendor_ModuleName::post" parent="Vendor_ModuleName::helloworld"/>
         <add id="Vendor_ModuleName::hello_configuration" title="Configuration" module="Vendor_ModuleName" sortOrder="99" parent="Vendor_ModuleName::helloworld" action="adminhtml/system_config/edit/section/helloworld" resource="Vendor_ModuleName::helloworld_configuration"/>
     </menu>
 </config>
