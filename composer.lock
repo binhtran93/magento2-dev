@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "74bddf1750ffa8a1780fa89e1a83e72c",
+    "content-hash": "a6236e0e4abbc592a419c92791c3bd02",
     "packages": [
         {
             "name": "amzn/amazon-pay-and-login-magento-2-module",
@@ -14338,6 +14338,42 @@
             ],
             "description": "Mageplaza Core for Magento 2",
             "time": "2019-12-23T03:04:13+00:00"
+        },
+        {
+            "name": "mirasvit/module-blog",
+            "version": "1.0.39",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mirasvit/module-blog.git",
+                "reference": "45b69ac7a193a01fd841cfb001174769a9a7c739"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mirasvit/module-blog/zipball/45b69ac7a193a01fd841cfb001174769a9a7c739",
+                "reference": "45b69ac7a193a01fd841cfb001174769a9a7c739",
+                "shasum": ""
+            },
+            "require": {
+                "magento/framework": "100.1.*|100.2.*|101.0.*|102.0.*"
+            },
+            "suggest": {
+                "mirasvit/module-blog-sample-data": "Sample Data for Blog"
+            },
+            "type": "magento2-module",
+            "autoload": {
+                "files": [
+                    "registration.php"
+                ],
+                "psr-4": {
+                    "Mirasvit\\Blog\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "OSL-3.0"
+            ],
+            "description": "Mirasvit Blog MX",
+            "time": "2020-04-07T12:19:17+00:00"
         },
         {
             "name": "monolog/monolog",

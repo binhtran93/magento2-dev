@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Smart_Blog::blog" title="Blog by Smart" module="Smart_Blog" sortOrder="700"
+             resource="Smart_Blog::blog" parent="Magento_Backend::content"/>
+
+        <add id="Smart_Blog::blog_post" title="All Posts" module="Smart_Blog" sortOrder="10"
+             resource="Smart_Blog::blog_post" parent="Smart_Blog::blog" action="sblog/post"/>
+
+        <add id="Smart_Blog::blog_category" title="Categories" module="Smart_Blog" sortOrder="20"
+             resource="Smart_Blog::blog_category" parent="Smart_Blog::blog" action="sblog/category"/>
+    </menu>
+</config>

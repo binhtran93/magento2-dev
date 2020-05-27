@@ -263,6 +263,8 @@ return [
         'MSP_TwoFactorAuth' => 1,
         'Mageplaza_Core' => 1,
         'Mageplaza_Blog' => 1,
+        'Mirasvit_Blog' => 1,
+        'Smart_Blog' => 1,
         'Temando_ShippingRemover' => 1,
         'Vendor_ModuleName' => 1,
         'Vertex_Tax' => 1,
