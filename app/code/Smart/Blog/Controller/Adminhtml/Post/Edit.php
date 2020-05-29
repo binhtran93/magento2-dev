@@ -7,8 +7,7 @@ use Magento\Backend\Model\View\Result\Page;
 use Magento\Backend\Model\View\Result\Page\Interceptor;
 use Magento\Framework\App\Action\Action;
 use Magento\Framework\Controller\ResultFactory;
-use Mirasvit\Blog\Api\Data\PostInterface;
-use Mirasvit\Blog\Controller\Adminhtml\Post;
+use Smart\Blog\Api\Data\PostInterface;
 
 class Edit extends Action
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace Mirasvit\Blog\Controller\Adminhtml\Post;
+namespace Smart\Blog\Controller\Adminhtml\Post;
 
 use Magento\Backend\App\Action\Context;
 use Magento\Framework\App\Action\Action;

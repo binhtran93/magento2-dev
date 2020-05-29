@@ -12,4 +12,10 @@
             <argument name="resourceModel" xsi:type="string">Smart\Blog\Model\ResourceModel\Post</argument>
         </arguments>
     </virtualType>
+
+    <preference for="Smart\Blog\Api\Data\CategoryInterface" type="Smart\Blog\Model\Category"/>
+    <preference for="Smart\Blog\Api\Repository\CategoryRepositoryInterface" type="Smart\Blog\Repository\CategoryRepository"/>
+    <preference for="Smart\Blog\Api\Repository\PostRepositoryInterface" type="Smart\Blog\Repository\PostRepository"/>
+    <preference for="Smart\Blog\Api\Data\PostInterface" type="Smart\Blog\Model\Post"/>
+
 </config>
