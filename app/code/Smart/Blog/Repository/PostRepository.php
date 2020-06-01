@@ -1,12 +1,13 @@
 <?php
 
-
 namespace Smart\Blog\Repository;
 
 use Smart\Blog\Api\Data\PostInterface;
-use Smart\Blog\Api\Repository\PostRepositoryInterface;
-use Smart\Blog\Model\ResourceModel\Category\Collection;
 use Smart\Blog\Api\Data\PostInterfaceFactory;
+use Smart\Blog\Api\Repository\PostRepositoryInterface;
+use Smart\Blog\Model\Post;
+use Smart\Blog\Model\ResourceModel\Category\Collection;
+use Smart\Blog\Model\ResourceModel\Post as PostResourceModel;
 
 class PostRepository implements PostRepositoryInterface
 {
@@ -16,13 +17,18 @@ class PostRepository implements PostRepositoryInterface
 
     private $factory;
 
+    private $resourceModel;
+
     /**
      * @param Collection $collection
+     * @param PostInterfaceFactory $factory
+     * @param PostResourceModel $resourceModel
      */
-    public function __construct(Collection $collection, PostInterfaceFactory $factory)
+    public function __construct(Collection $collection, PostInterfaceFactory $factory, PostResourceModel $resourceModel)
     {
         $this->collection = $collection;
         $this->factory = $factory;
+        $this->resourceModel = $resourceModel;
     }
 
     /**
@@ -35,10 +41,22 @@ class PostRepository implements PostRepositoryInterface
 
     /**
      * @inheritDoc
+     * @throws \Magento\Framework\Exception\AlreadyExistsException
      */
     public function save(PostInterface $model)
     {
-        // TODO: Implement save() method.
+        if (!$model->getType()) {
+            $model->setType(\Mirasvit\Blog\Api\Data\PostInterface::TYPE_POST);
+        }
+
+        if ($model->getCategoryIds()) {
+            $categoryIds = array_filter($model->getCategoryIds());
+            $model->setCategoryIds($categoryIds);
+        }
+
+        /** @var Post $model */
+
+        $this->resourceModel->save($model);
     }
 
     /**

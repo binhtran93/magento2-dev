@@ -38,7 +38,7 @@ class Post extends AbstractModel implements IdentityInterface, PostInterface
      */
     public function getType()
     {
-        // TODO: Implement getType() method.
+        return $this->getData(self::TYPE);
     }
 
     /**
@@ -46,7 +46,7 @@ class Post extends AbstractModel implements IdentityInterface, PostInterface
      */
     public function setType($value)
     {
-        // TODO: Implement setType() method.
+        return $this->setData(self::TYPE, $value);
     }
 
     /**
@@ -54,7 +54,7 @@ class Post extends AbstractModel implements IdentityInterface, PostInterface
      */
     public function getStatus()
     {
-        // TODO: Implement getStatus() method.
+        return $this->getData(self::STATUS);
     }
 
     /**
@@ -62,7 +62,7 @@ class Post extends AbstractModel implements IdentityInterface, PostInterface
      */
     public function setStatus($value)
     {
-        // TODO: Implement setStatus() method.
+        return $this->setData(self::STATUS, $value);
     }
 
     /**
@@ -70,7 +70,7 @@ class Post extends AbstractModel implements IdentityInterface, PostInterface
      */
     public function getName()
     {
-        // TODO: Implement getName() method.
+        return $this->getData(self::NAME);
     }
 
     /**
@@ -78,7 +78,7 @@ class Post extends AbstractModel implements IdentityInterface, PostInterface
      */
     public function setName($value)
     {
-        // TODO: Implement setName() method.
+        return $this->setData(self::NAME, $value);
     }
 
     /**
@@ -86,7 +86,7 @@ class Post extends AbstractModel implements IdentityInterface, PostInterface
      */
     public function getContent()
     {
-        // TODO: Implement getContent() method.
+        return $this->getData(self::CONTENT);
     }
 
     /**
@@ -94,7 +94,7 @@ class Post extends AbstractModel implements IdentityInterface, PostInterface
      */
     public function setContent($value)
     {
-        // TODO: Implement setContent() method.
+        return $this->setData(self::CONTENT, $value);
     }
 
     /**
@@ -102,7 +102,7 @@ class Post extends AbstractModel implements IdentityInterface, PostInterface
      */
     public function getCreatedAt()
     {
-        // TODO: Implement getCreatedAt() method.
+        return $this->getData(self::CREATED_AT);
     }
 
     /**
@@ -110,7 +110,7 @@ class Post extends AbstractModel implements IdentityInterface, PostInterface
      */
     public function setCreatedAt($value)
     {
-        // TODO: Implement setCreatedAt() method.
+        return $this->setData(self::CREATED_AT, $value);
     }
 
     /**
@@ -118,7 +118,7 @@ class Post extends AbstractModel implements IdentityInterface, PostInterface
      */
     public function getCategoryIds()
     {
-        // TODO: Implement getCategoryIds() method.
+        return $this->getData(self::CATEGORY_IDS);
     }
 
     /**
@@ -126,7 +126,7 @@ class Post extends AbstractModel implements IdentityInterface, PostInterface
      */
     public function setCategoryIds(array $value)
     {
-        // TODO: Implement setCategoryIds() method.
+        return $this->setData(self::CATEGORY_IDS, $value);
     }
 
     /**
@@ -134,7 +134,7 @@ class Post extends AbstractModel implements IdentityInterface, PostInterface
      */
     public function getStoreIds()
     {
-        // TODO: Implement getStoreIds() method.
+        return $this->getData(self::STORE_IDS);
     }
 
     /**
@@ -142,7 +142,7 @@ class Post extends AbstractModel implements IdentityInterface, PostInterface
      */
     public function setStoreIds(array $value)
     {
-        // TODO: Implement setStoreIds() method.
+        return $this->setData(self::STORE_IDS, $value);
     }
 
     /**
@@ -150,7 +150,7 @@ class Post extends AbstractModel implements IdentityInterface, PostInterface
      */
     public function getProductIds()
     {
-        // TODO: Implement getProductIds() method.
+        return $this->getData(self::PRODUCT_IDS);
     }
 
     /**
@@ -158,6 +158,6 @@ class Post extends AbstractModel implements IdentityInterface, PostInterface
      */
     public function setProductIds(array $value)
     {
-        // TODO: Implement setProductIds() method.
+        return $this->setData(self::PRODUCT_IDS, $value);
     }
 }
