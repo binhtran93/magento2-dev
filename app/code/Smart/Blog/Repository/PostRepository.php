@@ -6,7 +6,7 @@ use Smart\Blog\Api\Data\PostInterface;
 use Smart\Blog\Api\Data\PostInterfaceFactory;
 use Smart\Blog\Api\Repository\PostRepositoryInterface;
 use Smart\Blog\Model\Post;
-use Smart\Blog\Model\ResourceModel\Category\Collection;
+use Smart\Blog\Model\ResourceModel\Post\Collection;
 use Smart\Blog\Model\ResourceModel\Post as PostResourceModel;
 
 class PostRepository implements PostRepositoryInterface
@@ -64,7 +64,16 @@ class PostRepository implements PostRepositoryInterface
      */
     public function get($id)
     {
-        // TODO: Implement get() method.
+        /** @var Post $post */
+        $post = $this->createModel();
+
+        $this->resourceModel->load($post, $id);
+
+        if ($post->getId()) {
+            return $post;
+        }
+
+        return false;
     }
 
     /**

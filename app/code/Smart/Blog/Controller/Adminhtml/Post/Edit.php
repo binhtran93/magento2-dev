@@ -2,24 +2,15 @@
 
 namespace Smart\Blog\Controller\Adminhtml\Post;
 
-use Magento\Backend\App\Action\Context;
-use Magento\Backend\Model\View\Result\Page;
 use Magento\Backend\Model\View\Result\Page\Interceptor;
-use Magento\Framework\App\Action\Action;
 use Magento\Framework\Controller\ResultFactory;
 use Smart\Blog\Api\Data\PostInterface;
+use Smart\Blog\Controller\Adminhtml\Post;
 
-class Edit extends Action
+class Edit extends Post
 {
-    protected $resultRedirectFactory;
-
-    public function __construct(Context $context)
-    {
-        $this->resultRedirectFactory = $context->getResultRedirectFactory();
-        parent::__construct($context);
-    }
     /**
-     * @return Page
+     * @return Interceptor|\Magento\Framework\Controller\Result\Redirect
      */
     public function execute()
     {
@@ -27,17 +18,17 @@ class Edit extends Action
         $resultPage = $this->resultFactory->create(ResultFactory::TYPE_PAGE);
 
         $id    = $this->getRequest()->getParam(PostInterface::ID);
-//        $model = $this->initModel();
-//
-//        if ($id && !is_array($id) && !$model->getId()) {
-//            $this->messageManager->addErrorMessage(__('This post no longer exists.'));
-//
-//            return $this->resultRedirectFactory->create()->setPath('*/*/');
-//        }
-//
-//        $this->initPage($resultPage)->getConfig()->getTitle()->prepend(
-//            $model->getName() ? $model->getName() : __('New Post')
-//        );
+        $model = $this->initModel();
+
+        if ($id && !is_array($id) && !$model->getId()) {
+            $this->messageManager->addErrorMessage(__('This post no longer exists.'));
+
+            return $this->resultRedirectFactory->create()->setPath('*/*/');
+        }
+
+        $this->initPage($resultPage)->getConfig()->getTitle()->prepend(
+            $model->getName() ? $model->getName() : __('New Post')
+        );
 
         return $resultPage;
     }

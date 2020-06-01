@@ -277,7 +277,7 @@
             </argument>
         </column>
 
-        <actionsColumn name="actions" class="Mirasvit\Blog\Ui\Component\Listing\Column\PostActions">
+        <actionsColumn name="actions" class="Smart\Blog\Ui\Component\Listing\Column\PostActions">
             <argument name="data" xsi:type="array">
                 <item name="config" xsi:type="array">
                     <item name="resizeEnabled" xsi:type="boolean">false</item>
